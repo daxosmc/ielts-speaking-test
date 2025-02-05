@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Speaking Test</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎙️ IELTS Speaking Test Simulation</h1>
+
+        <div id="welcome-screen">
+            <input type="text" id="username" placeholder="Enter your name" />
+            <button onclick="startSession()">Start</button>
+        </div>
+
+        <div id="mode-selection" class="hidden">
+            <h2>Choose a Mode:</h2>
+            <button onclick="startPracticeMode()">Practice Mode</button>
+            <button onclick="startTestMode()">Test Mode</button>
+        </div>
+
+        <div id="test-container" class="hidden">
+            <h2 id="question-title"></h2>
+            <button onclick="startRecording()">🎤 Speak</button>
+            <p id="recording-status"></p>
+            <p id="transcription"></p>
+            <div class="feedback-box">
+                <p id="feedback"></p>
+            </div>
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+
+        <div id="download-report" class="hidden">
+            <button onclick="downloadPDF()">📄 Download IELTS Report</button>
+        </div>
+    </div>
+
+    <script src="/frontend/script.js"></script>
+</body>
+</html>
